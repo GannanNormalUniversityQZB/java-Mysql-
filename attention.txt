@@ -1,1 +1,3 @@
-Mysql版本8.0.26 ，jdk14
+Mysql:8.0.26 
+jdk:14
+eclipse:2021-03
