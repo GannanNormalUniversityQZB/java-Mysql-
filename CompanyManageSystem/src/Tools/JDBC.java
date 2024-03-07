@@ -5,25 +5,25 @@ public class JDBC {
 	static Connection con;
 	static String url="jdbc:mysql://localhost:3306/company";
 	static String user="root";
-	static String password="Qzb15607074531";
+	static String password="";
 	static String driver="com.mysql.cj.jdbc.Driver";
-	//Á¬½ÓÊı¾İ¿âº¯Êı
+	//è¿æ¥æ•°æ®åº“å‡½æ•°
 	public static Connection getConnection() {
-		//¼ÓÔØÇı¶¯
+		//åŠ è½½é©±åŠ¨
 		try {
 			Class.forName(driver);
-			System.out.println("Çı¶¯¼ÓÔØ³É¹¦~£¡");
+			System.out.println("é©±åŠ¨åŠ è½½æˆåŠŸ~ï¼");
 		} 
 		catch (ClassNotFoundException e) {
-			System.out.println("Çı¶¯¼ÓÔØÊ§°Ü~£¡");
+			System.out.println("é©±åŠ¨åŠ è½½å¤±è´¥~ï¼");
 		}
-		//Á¬½ÓÊı¾İ¿â
+		//è¿æ¥æ•°æ®åº“
 		try {
 			con=DriverManager.getConnection(url, user, password);
-			System.out.println("Á¬½ÓÊı¾İ³É¹¦~£¡");
+			System.out.println("è¿æ¥æ•°æ®æˆåŠŸ~ï¼");
 		} 
 		catch (SQLException e) {
-			System.out.println("Á¬½ÓÊı¾İÊ§°Ü~£¡");
+			System.out.println("è¿æ¥æ•°æ®å¤±è´¥~ï¼");
 		}
 		
 		return con;
